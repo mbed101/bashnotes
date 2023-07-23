@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Directory where the files are located
-directory="/path/to/directory"
+directory="."
 
 # Extension to search for
 extension=".txt"
@@ -22,5 +22,7 @@ for file in "$directory"/*"$extension"; do
     mv "$file" "$directory/$new_filename"
 
     echo "Renamed $filename to $new_filename"
+
+    ls -alh
   fi
 done
